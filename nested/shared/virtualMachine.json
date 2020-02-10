@@ -35,7 +35,7 @@
       }
     },
     "vmAdminPassword": {
-      "type": "securestring",
+      "type": "string",
       "metadata": {
         "description": "Password for the local admin account."
       }
