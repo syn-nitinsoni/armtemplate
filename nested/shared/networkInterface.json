@@ -25,15 +25,18 @@
       "metadata": {
         "description": "ID of Public IP resource."
       }
+    },
+    "deploymentType": {
+      "type": "string"
     }
   },
   "variables": {
-
+      "nicNameWithDeploymentType": "[concat(parameters('nicName'),'-',parameters('deploymentType'))]"
   },
   "resources": [
     {
       "type": "Microsoft.Network/networkInterfaces",
-      "name": "[parameters('nicName')]",
+      "name": "[variables('nicNameWithDeploymentType')]",
       "apiVersion": "[parameters('nicApiVersion')]",
       "location": "[resourceGroup().location]",
       "properties": {
@@ -57,7 +60,7 @@
   "outputs": {
     "vmNic": {
       "type": "string",
-      "value": "[resourceId('Microsoft.Network/networkInterfaces', parameters('nicName'))]"
+      "value": "[resourceId('Microsoft.Network/networkInterfaces', variables('nicNameWithDeploymentType'))]"
     }
   }
 }
