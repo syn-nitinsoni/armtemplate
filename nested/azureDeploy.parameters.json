@@ -73,6 +73,9 @@
     },
     "nestedDeploymentNamePublicIp": {
       "value": "deploy-public-ip"
+    },
+    "deploymentType": {
+      "value": "prod"
     }
   }
 }
