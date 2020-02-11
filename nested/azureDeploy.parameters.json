@@ -3,7 +3,7 @@
   "contentVersion": "1.0.0.0",
   "parameters": {
     "baseTemplateUri": {
-      "value": "https://github.com/syn-nitinsoni/armtemplate/tree/master/nested"
+      "value": "https://raw.githubusercontent.com/syn-nitinsoni/armtemplate/master/nested"
     },
     "nestedDeploymentNameVnet": {
       "value": "deploy-virtual-network"
