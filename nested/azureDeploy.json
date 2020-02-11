@@ -238,7 +238,8 @@
           "nicName": { "value": "[parameters('nicName')]" },
           "nicApiVersion": { "value": "[variables('nicApiVersion')]" },
           "subnetID": { "value": "[reference(parameters('nestedDeploymentNameVnet')).outputs.subnetID.value]" },
-          "publicIpID": { "value": "[reference(parameters('nestedDeploymentNamePublicIp')).outputs.publicIpID.value]" }
+          "publicIpID": { "value": "[reference(parameters('nestedDeploymentNamePublicIp')).outputs.publicIpID.value]" },
+          "deploymentType": { "value": "[parameters('deploymentType')]" }
         }
       }
     },
